@@ -37,28 +37,27 @@ monitoreo-alcantarillado-webots/
 └── README.md
 
 
-## 📋 Estado del proyecto
+📋 Estado del proyecto
 
-### 🔎 Investigación
+ 🔎 Investigación
 
 - Investigación sobre sensores.
 - Investigación sobre monitoreo del nivel del agua.
 - Investigación sobre detección de obstrucciones.
 
-### 🎨 Blender
+ 🎨 Blender
 
 - Modelado del alcantarillado.
 - Modelado del robot.
 - Modelado de obstáculos.
 
-### 🤖 Webots
+ 🤖 Webots
 
 - Creación del mundo inicial.
 - Integración del robot.
 - Integración de sensores.
 - Programación del sistema de monitoreo.
-
-## 👥 Equipo de trabajo
+ 👥 Equipo de trabajo
 
 - yuleisi carranza 
 - Andrus lopez 
