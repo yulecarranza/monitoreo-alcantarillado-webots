@@ -63,6 +63,6 @@ monitoreo-alcantarillado/
 
 ## 👥 Equipo de trabajo
 
-- Nombre del integrante 1
-- Nombre del integrante 2
-- Nombre del integrante 3
+- yuleisi carranza 
+- Andrus lopez 
+- luis rivera 
