@@ -32,11 +32,8 @@ Por medio de este proyecto se busca desarrollar una solución de monitoreo que p
 ## 📂 Estructura del proyecto
 
 ```text
-monitoreo-alcantarillado/
-├── controllers/
-├── protos/
-├── worlds/
-│   └── alcantarillado_vacio.wbt
+monitoreo-alcantarillado-webots/
+├── alcantarillado_vacio.wbt
 └── README.md
 
 
