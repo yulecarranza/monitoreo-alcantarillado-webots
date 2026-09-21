@@ -1,18 +1,18 @@
-#  Sistema Inteligente de Monitoreo de Alcantarillado
+ Sistema Inteligente de Monitoreo de Alcantarillado
 
-## 📌 Descripción
+ 📌 Descripción
 
 Este proyecto consiste en el desarrollo de un sistema robótico para el monitoreo de alcantarillados, utilizando simulación en Webots.
 
 El objetivo es diseñar un robot capaz de recorrer un sistema de alcantarillado y utilizar sensores para detectar situaciones que puedan representar un riesgo, como niveles elevados de agua y obstrucciones.
 
-## 🌧️ Problemática
+ 🌧️ Problemática
 
 En épocas de lluvias fuertes, los sistemas de alcantarillado pueden presentar desbordamientos debido al aumento del nivel del agua y a la acumulación de basura u otros elementos que pueden bloquear el paso.
 
 Por medio de este proyecto se busca desarrollar una solución de monitoreo que permita detectar estas situaciones de manera temprana.
 
-## 🎯 Objetivos
+ 🎯 Objetivos
 
 - Diseñar un entorno de alcantarillado en Webots.
 - Diseñar un robot para realizar el monitoreo.
@@ -22,18 +22,19 @@ Por medio de este proyecto se busca desarrollar una solución de monitoreo que p
 - Generar alertas cuando se detecten condiciones críticas.
 - Realizar pruebas mediante simulación.
 
-## 🛠️ Herramientas
+🛠️ Herramientas
 
 - Webots
 - Blender
 - GitHub
 - Programación de controladores para el robot
 
-## 📂 Estructura del proyecto
+ 📂 Estructura del proyecto
 
 ```text
 monitoreo-alcantarillado-webots/
-├── alcantarillado_vacio.wbt
+├── worlds/
+│   └── alcantarillado_vacio.wbt
 └── README.md
 
 
