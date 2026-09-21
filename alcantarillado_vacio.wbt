@@ -1,0 +1,10 @@
+#VRML_SIM R2025a utf8
+
+WorldInfo {
+  basicTimeStep 16
+}
+
+Viewpoint {
+  orientation 0 1 0 0
+  position 0 0 5
+}
