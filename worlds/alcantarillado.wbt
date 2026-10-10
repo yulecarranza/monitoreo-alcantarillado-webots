@@ -1,0 +1,918 @@
+#VRML_SIM R2025a utf8
+
+WorldInfo {
+  title "Monitoreo Inteligente del Alcantarillado - Avance 3"
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation 0.16975982318533273 -0.017262593678852592 -0.9853342606910424 3.336308927260741
+  position 42.06135422630819 -5.396502399267488 12.897983565753714
+}
+Background {
+  skyColor [
+    0.55 0.75 0.95
+  ]
+}
+DirectionalLight {
+  ambientIntensity 0.6
+  direction -0.4 0.5 -1
+  intensity 1.2
+}
+DirectionalLight {
+  direction 0.5 -0.4 -0.6
+  intensity 0.6
+}
+Robot {
+  children [
+    Receiver {
+      name "receptor"
+      channel 1
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -2.220446049250313e-16
+        axis 0 -1 0
+        anchor 6.2 0 0.8
+        dampingConstant 0.5
+      }
+      device [
+        RotationalMotor {
+          name "compuerta_motor"
+          maxVelocity 0.8
+          maxTorque 30
+        }
+        PositionSensor {
+          name "compuerta_sensor"
+        }
+      ]
+      endPoint Solid {
+        translation 6.2 0 0.8
+        rotation 0 1 0 2.2832222013981507e-16
+        children [
+          Pose {
+            translation 0 0 -0.39
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 0.8 0.35 0.1
+                  roughness 0.7
+                  metalness 0.1
+                }
+                geometry Box {
+                  size 0.05 0.98 0.78
+                }
+              }
+            ]
+          }
+        ]
+        name "compuerta"
+        boundingObject Pose {
+          translation 0 0 -0.39
+          children [
+            Box {
+              size 0.05 0.98 0.78
+            }
+          ]
+        }
+        physics Physics {
+          density -1
+          mass 2
+        }
+        linearVelocity -9.85522774499259e-15 0 7.958078640513121e-16
+        angularVelocity 0 -3.2553058706069247e-15 0
+      }
+    }
+  ]
+  name "lluvia"
+  controller "nivel_agua"
+  supervisor TRUE
+}
+Solid {
+  translation 0 0 -0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.35 0.5 0.3
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 40 40 0.1
+      }
+    }
+  ]
+  name "suelo"
+  boundingObject Box {
+    size 40 40 0.1
+  }
+}
+Solid {
+  translation 0 0 -0.025
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.45 0.45 0.47
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 12.4 1.8 0.05
+      }
+    }
+  ]
+  name "fondo_canal"
+  boundingObject Box {
+    size 12.4 1.8 0.05
+  }
+}
+Solid {
+  translation 0 -0.95 0.55
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.6 0.62
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 12.4 0.1 1.1
+      }
+    }
+  ]
+  name "pared_izq"
+  boundingObject Box {
+    size 12.4 0.1 1.1
+  }
+}
+Solid {
+  translation 0 0.95 0.55
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.6 0.62
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 12.4 0.1 1.1
+      }
+    }
+  ]
+  name "pared_der"
+  boundingObject Box {
+    size 12.4 0.1 1.1
+  }
+}
+Solid {
+  translation -6.2 0 0.55
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.6 0.62
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 1.8 1.1
+      }
+    }
+  ]
+  name "pared_ini"
+  boundingObject Box {
+    size 0.1 1.8 1.1
+  }
+}
+Solid {
+  translation 6.2 -0.7 0.55
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.6 0.62
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.4 1.1
+      }
+    }
+  ]
+  name "fin_izq"
+  boundingObject Box {
+    size 0.1 0.4 1.1
+  }
+}
+Solid {
+  translation 6.2 0.7 0.55
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.6 0.62
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.4 1.1
+      }
+    }
+  ]
+  name "fin_der"
+  boundingObject Box {
+    size 0.1 0.4 1.1
+  }
+}
+Solid {
+  translation 6.2 0 0.96
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.6 0.62
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 1 0.28
+      }
+    }
+  ]
+  name "fin_sup"
+  boundingObject Box {
+    size 0.1 1 0.28
+  }
+}
+Solid {
+  translation 0 0 0.575
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.35 0.35 0.38
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 12 0.8 0.05
+      }
+    }
+  ]
+  name "pasarela"
+  boundingObject Box {
+    size 12 0.8 0.05
+  }
+}
+Solid {
+  translation 0 -0.38 0.65
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.85 0.7 0.1
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 12 0.04 0.1
+      }
+    }
+  ]
+  name "borde_izq"
+  boundingObject Box {
+    size 12 0.04 0.1
+  }
+}
+Solid {
+  translation 0 0.38 0.65
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.85 0.7 0.1
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 12 0.04 0.1
+      }
+    }
+  ]
+  name "borde_der"
+  boundingObject Box {
+    size 12 0.04 0.1
+  }
+}
+Solid {
+  translation -4.5 0 0.575
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.3 0.3 0.33
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.15 1.8 0.05
+      }
+    }
+  ]
+  name "viga_0"
+}
+Solid {
+  translation -1.5 0 0.575
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.3 0.3 0.33
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.15 1.8 0.05
+      }
+    }
+  ]
+  name "viga_1"
+}
+Solid {
+  translation 1.5 0 0.575
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.3 0.3 0.33
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.15 1.8 0.05
+      }
+    }
+  ]
+  name "viga_2"
+}
+Solid {
+  translation 4.5 0 0.575
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.3 0.3 0.33
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.15 1.8 0.05
+      }
+    }
+  ]
+  name "viga_3"
+}
+Solid {
+  translation -2 0.65 0.3
+  rotation 0 0 1 0.3
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.35 0.15
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.5 0.4 0.6
+      }
+    }
+  ]
+  name "pila_A1"
+  boundingObject Box {
+    size 0.5 0.4 0.6
+  }
+}
+Solid {
+  translation -1.8 0.72 0.25
+  rotation 0 0 1 0.8
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.4 0.7
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.25 0.25 0.5
+      }
+    }
+  ]
+  name "pila_A2"
+  boundingObject Box {
+    size 0.25 0.25 0.5
+  }
+}
+Solid {
+  translation 3 0.65 0.3
+  rotation 0 0 1 -0.2
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.65 0.65 0.65
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.6 0.4 0.6
+      }
+    }
+  ]
+  name "pila_B1"
+  boundingObject Box {
+    size 0.6 0.4 0.6
+  }
+}
+Solid {
+  translation 3.3 0.6 0.2
+  rotation 0 0 1 0.6
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.25 0.2
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.4
+      }
+    }
+  ]
+  name "pila_B2"
+  boundingObject Box {
+    size 0.3 0.3 0.4
+  }
+}
+Solid {
+  translation -3 0.6 0.06
+  rotation 0 0 1 0.7
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.5 0.3 0.2
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.15 0.12
+      }
+    }
+  ]
+  name "basura_fondo_0"
+}
+Solid {
+  translation -1 -0.65 0.06
+  rotation 0 0 1 1.4
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.5 0.3 0.2
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.15 0.12
+      }
+    }
+  ]
+  name "basura_fondo_1"
+}
+Solid {
+  translation 1 0.55 0.06
+  rotation 0 0 1 2.0999999999999996
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.5 0.3 0.2
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.15 0.12
+      }
+    }
+  ]
+  name "basura_fondo_2"
+}
+Solid {
+  translation 2.5 -0.6 0.06
+  rotation 0 0 1 2.8
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.5 0.3 0.2
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.15 0.12
+      }
+    }
+  ]
+  name "basura_fondo_3"
+}
+DEF AGUA Solid {
+  translation 0 0 -0.10144907590325875
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.1 0.45 0.8
+        transparency 0.45
+        roughness 0.2
+        metalness 0
+      }
+      geometry Box {
+        size 12.2 1.76 1
+      }
+    }
+  ]
+  name "agua"
+}
+DEF AGUA_DET Solid {
+  translation 0 0 -0.10144907590325875
+  name "agua_det"
+  boundingObject Box {
+    size 12.2 1.76 1
+  }
+}
+Robot {
+  translation -0.27540002258184326 0.0004289177769359097 0.6753517858833488
+  rotation 0.10367773157198898 0.9887654560530692 0.10767451366155587 0.18336054945193356
+  children [
+    Pose {
+      translation 0 0 0.03
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.75 0.1
+            roughness 0.6
+            metalness 0
+          }
+          geometry Box {
+            size 0.4 0.24 0.1
+          }
+        }
+      ]
+    }
+    DistanceSensor {
+      translation 0.21 0 0.03
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.8 0.1 0.1
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.02 0.05 0.03
+          }
+        }
+      ]
+      name "ds_frente"
+      lookupTable [
+        0 0 0
+        1.5 1.5 0
+      ]
+    }
+    GPS {
+    }
+    Emitter {
+      name "emisor"
+      channel 1
+    }
+    LED {
+      translation -0.1 0 0.1
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.5 0.5 0.5
+            roughness 1
+            metalness 0
+            emissiveColor 1 0.6000000238418579 0
+          }
+          geometry Sphere {
+            radius 0.03
+          }
+        }
+      ]
+      name "led_alerta"
+      color [
+        0 1 0
+        1 0.6 0
+        1 0 0
+      ]
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 1.5708004181867246
+        axis -1 0 0
+        anchor 0 0.14 0.1
+        dampingConstant 0.3
+      }
+      device [
+        RotationalMotor {
+          name "brazo_motor"
+          maxVelocity 1
+          maxTorque 3
+        }
+        PositionSensor {
+          name "brazo_sensor"
+        }
+      ]
+      endPoint Solid {
+        translation 0 0.14 0.1
+        rotation -1 0 0 1.5708004181867248
+        children [
+          Pose {
+            translation 0 0 0.25
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 0.2 0.2 0.2
+                  roughness 1
+                  metalness 0
+                }
+                geometry Box {
+                  size 0.03 0.03 0.5
+                }
+              }
+            ]
+          }
+          DistanceSensor {
+            translation 0 0 0.5
+            rotation 0 0 1 1.5708
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 0.1 0.6 0.9
+                  roughness 1
+                  metalness 0
+                }
+                geometry Box {
+                  size 0.03 0.05 0.05
+                }
+              }
+            ]
+            name "ds_agua"
+            lookupTable [
+              0 0 0
+              1.5 1.5 0
+            ]
+          }
+        ]
+        name "brazo"
+        boundingObject Pose {
+          translation 0 0 0.25
+          children [
+            Box {
+              size 0.03 0.03 0.5
+            }
+          ]
+        }
+        physics Physics {
+          density -1
+          mass 0.15
+        }
+        linearVelocity -0.39744584492762997 -0.023003860673734812 0.3641071672624633
+        angularVelocity 0.010193000570960287 -0.6310813167229097 0.22060124348460508
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 27.607731416740783
+        axis 0 1 0
+        anchor 0.13 0.19 0
+      }
+      device [
+        RotationalMotor {
+          name "rueda_del_izq"
+          maxVelocity 20
+          maxTorque 5
+        }
+      ]
+      endPoint Solid {
+        translation 0.13 0.19 0
+        rotation 0 1 0 2.4749901880224376
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.1 0.1 0.1
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.04
+              radius 0.08
+            }
+          }
+          Pose {
+            translation 0.05 0 0
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  roughness 1
+                  metalness 0
+                }
+                geometry Box {
+                  size 0.03 0.045 0.03
+                }
+              }
+            ]
+          }
+        ]
+        name "rueda_del_izq_solido"
+        boundingObject Cylinder {
+          height 0.04
+          radius 0.08
+        }
+        physics Physics {
+          density -1
+          mass 0.3
+        }
+        linearVelocity -0.27557626598046403 0.003379400884038549 0.43420483847335367
+        angularVelocity 0.08555840744533888 -6.000661859909375 0.10226374502903318
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -67.72114753058077
+        axis 0 1 0
+        anchor -0.13 0.19 0
+      }
+      device [
+        RotationalMotor {
+          name "rueda_tra_izq"
+          maxVelocity 20
+          maxTorque 5
+        }
+      ]
+      endPoint Solid {
+        translation -0.13 0.19 0
+        rotation 0 -1 0 4.8892944587849
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.1 0.1 0.1
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.04
+              radius 0.08
+            }
+          }
+          Pose {
+            translation 0.05 0 0
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  roughness 1
+                  metalness 0
+                }
+                geometry Box {
+                  size 0.03 0.045 0.03
+                }
+              }
+            ]
+          }
+        ]
+        name "rueda_tra_izq_solido"
+        boundingObject Cylinder {
+          height 0.04
+          radius 0.08
+        }
+        physics Physics {
+          density -1
+          mass 0.3
+        }
+        linearVelocity -0.30214737839233025 -0.05318985353382039 0.27268542904384335
+        angularVelocity 0.08617196328144622 -6.000605290371441 0.09956172704148812
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 24.577271184045642
+        axis 0 1 0
+        anchor 0.13 -0.19 0
+      }
+      device [
+        RotationalMotor {
+          name "rueda_del_der"
+          maxVelocity 20
+          maxTorque 5
+        }
+      ]
+      endPoint Solid {
+        translation 0.13 -0.19 0
+        rotation 0 -1 0 0.5554700446727034
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.1 0.1 0.1
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.04
+              radius 0.08
+            }
+          }
+          Pose {
+            translation 0.05 0 0
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  roughness 1
+                  metalness 0
+                }
+                geometry Box {
+                  size 0.03 0.045 0.03
+                }
+              }
+            ]
+          }
+        ]
+        name "rueda_del_der_solido"
+        boundingObject Cylinder {
+          height 0.04
+          radius 0.08
+        }
+        physics Physics {
+          density -1
+          mass 0.3
+        }
+        linearVelocity -0.18663249931489492 0.006020118950530156 0.43392246750238206
+        angularVelocity 0.10357184154460694 -7.257381583095458 0.07349702053088147
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -64.44142547211258
+        axis 0 1 0
+        anchor -0.13 -0.19 0
+      }
+      device [
+        RotationalMotor {
+          name "rueda_tra_der"
+          maxVelocity 20
+          maxTorque 5
+        }
+      ]
+      endPoint Solid {
+        translation -0.13 -0.19 0
+        rotation 0 -1 0 1.6095724003167196
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.1 0.1 0.1
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.04
+              radius 0.08
+            }
+          }
+          Pose {
+            translation 0.05 0 0
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  roughness 1
+                  metalness 0
+                }
+                geometry Box {
+                  size 0.03 0.045 0.03
+                }
+              }
+            ]
+          }
+        ]
+        name "rueda_tra_der_solido"
+        boundingObject Cylinder {
+          height 0.04
+          radius 0.08
+        }
+        physics Physics {
+          density -1
+          mass 0.3
+        }
+        linearVelocity -0.21316042676296576 -0.050637325568700375 0.272563500638125
+        angularVelocity 0.10432992348385645 -7.2573796053855215 0.07389326696168141
+      }
+    }
+  ]
+  name "robot_monitor"
+  boundingObject Pose {
+    translation 0 0 0.03
+    children [
+      Box {
+        size 0.4 0.24 0.1
+      }
+    ]
+  }
+  physics Physics {
+    density -1
+    mass 3
+  }
+  controller "robot_monitor"
+  linearVelocity -0.2628989637860783 -0.0226502681020412 0.35656595014585757
+  angularVelocity 0.010190328045934255 -0.6310813342956202 0.2206014741370025
+}
