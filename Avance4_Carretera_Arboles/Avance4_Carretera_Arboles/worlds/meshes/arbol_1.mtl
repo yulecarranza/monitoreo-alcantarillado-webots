@@ -1,0 +1,18 @@
+newmtl hojas_1
+Ka 0 0 0
+Kd 0.25 0.55 0.25
+Ks 0.05 0.05 0.05
+Ke 0 0 0
+Ns 10
+d 1
+illum 2
+
+newmtl tronco
+Ka 0 0 0
+Kd 0.4 0.27 0.15
+Ks 0.05 0.05 0.05
+Ke 0 0 0
+Ns 10
+d 1
+illum 2
+

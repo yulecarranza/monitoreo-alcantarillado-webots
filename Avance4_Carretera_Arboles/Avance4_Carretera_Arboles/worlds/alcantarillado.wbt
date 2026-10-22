@@ -1,0 +1,2689 @@
+#VRML_SIM R2025a utf8
+
+WorldInfo {
+  title "Monitoreo Inteligente del Alcantarillado - Avance 3 + Ciudad"
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation 0.0014768275109669794 -0.9999931168658776 -0.0034037040662447788 5.464430280449338
+  position -86.95597210165182 0.6176749442794875 99.44125402772836
+}
+Background {
+  skyColor [
+    0.55 0.75 0.95
+  ]
+}
+DirectionalLight {
+  ambientIntensity 0.6
+  direction -0.4 0.5 -1
+  intensity 1.2
+}
+DirectionalLight {
+  direction 0.5 -0.4 -0.6
+  intensity 0.6
+}
+Robot {
+  children [
+    Receiver {
+      name "receptor"
+      channel 1
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 1.5084864558607316e-20
+        axis 0 -1 0
+        anchor 6.2 0 0.8
+        dampingConstant 0.5
+      }
+      device [
+        RotationalMotor {
+          name "compuerta_motor"
+          maxVelocity 0.8
+          maxTorque 30
+        }
+        PositionSensor {
+          name "compuerta_sensor"
+        }
+      ]
+      endPoint Solid {
+        translation 6.2 0 0.8
+        rotation 0 -1 0 1.6765695561731087e-20
+        children [
+          Pose {
+            translation 0 0 -0.39
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 0.8 0.35 0.1
+                  roughness 0.7
+                  metalness 0.1
+                }
+                geometry Box {
+                  size 0.05 0.98 0.78
+                }
+              }
+            ]
+          }
+        ]
+        name "compuerta"
+        boundingObject Pose {
+          translation 0 0 -0.39
+          children [
+            Box {
+              size 0.05 0.98 0.78
+            }
+          ]
+        }
+        physics Physics {
+          density -1
+          mass 2
+        }
+        linearVelocity -2.2204530550367823e-14 0 7.958078640513122e-16
+        angularVelocity 0 1.7959277752740022e-19 0
+      }
+    }
+  ]
+  name "lluvia"
+  controller "nivel_agua"
+  supervisor TRUE
+}
+Solid {
+  translation 0 0 -0.1
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.35 0.5 0.3
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 40 40 0.1
+      }
+    }
+  ]
+  name "suelo"
+  boundingObject Box {
+    size 40 40 0.1
+  }
+}
+Solid {
+  translation 0 0 -0.025
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.45 0.45 0.47
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 12.4 1.8 0.05
+      }
+    }
+  ]
+  name "fondo_canal"
+  boundingObject Box {
+    size 12.4 1.8 0.05
+  }
+}
+Solid {
+  translation 0 -0.95 0.55
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.6 0.62
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 12.4 0.1 1.1
+      }
+    }
+  ]
+  name "pared_izq"
+  boundingObject Box {
+    size 12.4 0.1 1.1
+  }
+}
+Solid {
+  translation 0 0.95 0.55
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.6 0.62
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 12.4 0.1 1.1
+      }
+    }
+  ]
+  name "pared_der"
+  boundingObject Box {
+    size 12.4 0.1 1.1
+  }
+}
+Solid {
+  translation -6.2 0 0.55
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.6 0.62
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 1.8 1.1
+      }
+    }
+  ]
+  name "pared_ini"
+  boundingObject Box {
+    size 0.1 1.8 1.1
+  }
+}
+Solid {
+  translation 6.2 -0.7 0.55
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.6 0.62
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.4 1.1
+      }
+    }
+  ]
+  name "fin_izq"
+  boundingObject Box {
+    size 0.1 0.4 1.1
+  }
+}
+Solid {
+  translation 6.2 0.7 0.55
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.6 0.62
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.4 1.1
+      }
+    }
+  ]
+  name "fin_der"
+  boundingObject Box {
+    size 0.1 0.4 1.1
+  }
+}
+Solid {
+  translation 6.2 0 0.96
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.6 0.62
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 1 0.28
+      }
+    }
+  ]
+  name "fin_sup"
+  boundingObject Box {
+    size 0.1 1 0.28
+  }
+}
+Solid {
+  translation 0 0 0.575
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.35 0.35 0.38
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 12 0.8 0.05
+      }
+    }
+  ]
+  name "pasarela"
+  boundingObject Box {
+    size 12 0.8 0.05
+  }
+}
+Solid {
+  translation 0 -0.38 0.65
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.85 0.7 0.1
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 12 0.04 0.1
+      }
+    }
+  ]
+  name "borde_izq"
+  boundingObject Box {
+    size 12 0.04 0.1
+  }
+}
+Solid {
+  translation 0 0.38 0.65
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.85 0.7 0.1
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 12 0.04 0.1
+      }
+    }
+  ]
+  name "borde_der"
+  boundingObject Box {
+    size 12 0.04 0.1
+  }
+}
+Solid {
+  translation -4.5 0 0.575
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.3 0.3 0.33
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.15 1.8 0.05
+      }
+    }
+  ]
+  name "viga_0"
+}
+Solid {
+  translation -1.5 0 0.575
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.3 0.3 0.33
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.15 1.8 0.05
+      }
+    }
+  ]
+  name "viga_1"
+}
+Solid {
+  translation 1.5 0 0.575
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.3 0.3 0.33
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.15 1.8 0.05
+      }
+    }
+  ]
+  name "viga_2"
+}
+Solid {
+  translation 4.5 0 0.575
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.3 0.3 0.33
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.15 1.8 0.05
+      }
+    }
+  ]
+  name "viga_3"
+}
+Solid {
+  translation -2 0.65 0.3
+  rotation 0 0 1 0.3
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.35 0.15
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.5 0.4 0.6
+      }
+    }
+  ]
+  name "pila_A1"
+  boundingObject Box {
+    size 0.5 0.4 0.6
+  }
+}
+Solid {
+  translation -1.8 0.72 0.25
+  rotation 0 0 1 0.8
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.4 0.7
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.25 0.25 0.5
+      }
+    }
+  ]
+  name "pila_A2"
+  boundingObject Box {
+    size 0.25 0.25 0.5
+  }
+}
+Solid {
+  translation 3 0.65 0.3
+  rotation 0 0 1 -0.2
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.65 0.65 0.65
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.6 0.4 0.6
+      }
+    }
+  ]
+  name "pila_B1"
+  boundingObject Box {
+    size 0.6 0.4 0.6
+  }
+}
+Solid {
+  translation 3.3 0.6 0.2
+  rotation 0 0 1 0.6
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.6 0.25 0.2
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.3 0.4
+      }
+    }
+  ]
+  name "pila_B2"
+  boundingObject Box {
+    size 0.3 0.3 0.4
+  }
+}
+Solid {
+  translation -3 0.6 0.06
+  rotation 0 0 1 0.7
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.5 0.3 0.2
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.15 0.12
+      }
+    }
+  ]
+  name "basura_fondo_0"
+}
+Solid {
+  translation -1 -0.65 0.06
+  rotation 0 0 1 1.4
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.5 0.3 0.2
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.15 0.12
+      }
+    }
+  ]
+  name "basura_fondo_1"
+}
+Solid {
+  translation 1 0.55 0.06
+  rotation 0 0 1 2.0999999999999996
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.5 0.3 0.2
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.15 0.12
+      }
+    }
+  ]
+  name "basura_fondo_2"
+}
+Solid {
+  translation 2.5 -0.6 0.06
+  rotation 0 0 1 2.8
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.5 0.3 0.2
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.15 0.12
+      }
+    }
+  ]
+  name "basura_fondo_3"
+}
+DEF AGUA Solid {
+  translation 0 0 -0.11579472812399505
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.1 0.45 0.8
+        transparency 0.45
+        roughness 0.2
+        metalness 0
+      }
+      geometry Box {
+        size 12.2 1.76 1
+      }
+    }
+  ]
+  name "agua"
+}
+DEF AGUA_DET Solid {
+  translation 0 0 -0.11579472812399505
+  name "agua_det"
+  boundingObject Box {
+    size 12.2 1.76 1
+  }
+}
+Robot {
+  translation 3.5462762759893076 0.0036745978769772173 0.6643165567714712
+  rotation 0.03221286461665696 0.9734274060986985 0.22671880471003836 0.07192615854539808
+  children [
+    Pose {
+      translation 0 0 0.03
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.95 0.75 0.1
+            roughness 0.6
+            metalness 0
+          }
+          geometry Box {
+            size 0.4 0.24 0.1
+          }
+        }
+      ]
+    }
+    DistanceSensor {
+      translation 0.21 0 0.03
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.8 0.1 0.1
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.02 0.05 0.03
+          }
+        }
+      ]
+      name "ds_frente"
+      lookupTable [
+        0 0 0
+        1.5 1.5 0
+      ]
+    }
+    GPS {
+    }
+    Emitter {
+      name "emisor"
+      channel 1
+    }
+    LED {
+      translation -0.1 0 0.1
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.5 0.5 0.5
+            roughness 1
+            metalness 0
+            emissiveColor 1 0.6000000238418579 0
+          }
+          geometry Sphere {
+            radius 0.03
+          }
+        }
+      ]
+      name "led_alerta"
+      color [
+        0 1 0
+        1 0.6 0
+        1 0 0
+      ]
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 1.570953402447221
+        axis -1 0 0
+        anchor 0 0.14 0.1
+        dampingConstant 0.3
+      }
+      device [
+        RotationalMotor {
+          name "brazo_motor"
+          maxVelocity 1
+          maxTorque 3
+        }
+        PositionSensor {
+          name "brazo_sensor"
+        }
+      ]
+      endPoint Solid {
+        translation 0 0.14 0.1
+        rotation -1 0 0 1.5709534024472211
+        children [
+          Pose {
+            translation 0 0 0.25
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 0.2 0.2 0.2
+                  roughness 1
+                  metalness 0
+                }
+                geometry Box {
+                  size 0.03 0.03 0.5
+                }
+              }
+            ]
+          }
+          DistanceSensor {
+            translation 0 0 0.5
+            rotation 0 0 1 1.5708
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  baseColor 0.1 0.6 0.9
+                  roughness 1
+                  metalness 0
+                }
+                geometry Box {
+                  size 0.03 0.05 0.05
+                }
+              }
+            ]
+            name "ds_agua"
+            lookupTable [
+              0 0 0
+              1.5 1.5 0
+            ]
+          }
+        ]
+        name "brazo"
+        boundingObject Pose {
+          translation 0 0 0.25
+          children [
+            Box {
+              size 0.03 0.03 0.5
+            }
+          ]
+        }
+        physics Physics {
+          density -1
+          mass 0.15
+        }
+        linearVelocity 0.08039424739720447 -0.03260416277978248 0.2680887739804006
+        angularVelocity 0.2402583794878277 -2.067436594845444 0.0035821302726200942
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 41.25436196012591
+        axis 0 1 0
+        anchor 0.13 0.19 0
+      }
+      device [
+        RotationalMotor {
+          name "rueda_del_izq"
+          maxVelocity 20
+          maxTorque 5
+        }
+      ]
+      endPoint Solid {
+        translation 0.13 0.19 0
+        rotation 0 1 0 3.5552501170483937
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.1 0.1 0.1
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.04
+              radius 0.08
+            }
+          }
+          Pose {
+            translation 0.05 0 0
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  roughness 1
+                  metalness 0
+                }
+                geometry Box {
+                  size 0.03 0.045 0.03
+                }
+              }
+            ]
+          }
+        ]
+        name "rueda_del_izq_solido"
+        boundingObject Cylinder {
+          height 0.04
+          radius 0.08
+        }
+        physics Physics {
+          density -1
+          mass 0.3
+        }
+        linearVelocity 0.30922151103116413 -0.005404679891124149 0.4779597935745069
+        angularVelocity 0.13564024078753967 4.335215042958735 -0.008140643587845067
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -154.8536751959406
+        axis 0 1 0
+        anchor -0.13 0.19 0
+      }
+      device [
+        RotationalMotor {
+          name "rueda_tra_izq"
+          maxVelocity 20
+          maxTorque 5
+        }
+      ]
+      endPoint Solid {
+        translation -0.13 0.19 0
+        rotation 0 -1 0 4.057227823630535
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.1 0.1 0.1
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.04
+              radius 0.08
+            }
+          }
+          Pose {
+            translation 0.05 0 0
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  roughness 1
+                  metalness 0
+                }
+                geometry Box {
+                  size 0.03 0.045 0.03
+                }
+              }
+            ]
+          }
+        ]
+        name "rueda_tra_izq_solido"
+        boundingObject Cylinder {
+          height 0.04
+          radius 0.08
+        }
+        physics Physics {
+          density -1
+          mass 0.3
+        }
+        linearVelocity 0.26373888353882224 -0.012247860806503183 -0.059347771115621895
+        angularVelocity 0.1375984253347312 4.3352644814723975 -0.004514061099072521
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -2.7610462910372466
+        axis 0 1 0
+        anchor 0.13 -0.19 0
+      }
+      device [
+        RotationalMotor {
+          name "rueda_del_der"
+          maxVelocity 20
+          maxTorque 5
+        }
+      ]
+      endPoint Solid {
+        translation 0.13 -0.19 0
+        rotation 0 -1 0 2.7610462910372466
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.1 0.1 0.1
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.04
+              radius 0.08
+            }
+          }
+          Pose {
+            translation 0.05 0 0
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  roughness 1
+                  metalness 0
+                }
+                geometry Box {
+                  size 0.03 0.045 0.03
+                }
+              }
+            ]
+          }
+        ]
+        name "rueda_del_der_solido"
+        boundingObject Cylinder {
+          height 0.04
+          radius 0.08
+        }
+        physics Physics {
+          density -1
+          mass 0.3
+        }
+        linearVelocity 0.31058956321098785 -0.004329965787559856 0.39953697340075994
+        angularVelocity 0.15048582116478437 3.5283170931890666 -0.0036393531948797006
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -192.5587742887053
+        axis 0 1 0
+        anchor -0.13 -0.19 0
+      }
+      device [
+        RotationalMotor {
+          name "rueda_tra_der"
+          maxVelocity 20
+          maxTorque 5
+        }
+      ]
+      endPoint Solid {
+        translation -0.13 -0.19 0
+        rotation 0 -1 0 4.063215073317714
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.1 0.1 0.1
+              roughness 1
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.04
+              radius 0.08
+            }
+          }
+          Pose {
+            translation 0.05 0 0
+            children [
+              Shape {
+                appearance PBRAppearance {
+                  roughness 1
+                  metalness 0
+                }
+                geometry Box {
+                  size 0.03 0.045 0.03
+                }
+              }
+            ]
+          }
+        ]
+        name "rueda_tra_der_solido"
+        boundingObject Cylinder {
+          height 0.04
+          radius 0.08
+        }
+        physics Physics {
+          density -1
+          mass 0.3
+        }
+        linearVelocity 0.26466302221555743 -0.011559552682824027 -0.13687618811642663
+        angularVelocity 0.1506111440836455 3.5283122533887585 -0.0036976981061099534
+      }
+    }
+  ]
+  name "robot_monitor"
+  boundingObject Pose {
+    translation 0 0 0.03
+    children [
+      Box {
+        size 0.4 0.24 0.1
+      }
+    ]
+  }
+  physics Physics {
+    density -1
+    mass 3
+  }
+  controller "robot_monitor"
+  linearVelocity 0.22528823083493668 -0.015450678761322313 0.17543828399045835
+  angularVelocity 0.2384674170433141 -2.0674616476924528 0.003799970767741072
+}
+Group {
+  children [
+    Pose {
+      translation 0 0 -0.12
+      children [
+        Shape {
+          appearance DEF CIU_C_035_055_030 Appearance {
+            material Material {
+              diffuseColor 0.35 0.55 0.3
+            }
+          }
+          geometry Box {
+            size 400 400 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 18 24.5 0.525
+      children [
+        Shape {
+          appearance DEF CIU_C_045_033_022 Appearance {
+            material Material {
+              diffuseColor 0.45 0.33 0.22
+            }
+          }
+          geometry Box {
+            size 100 47 1.15
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 18 24.5 1.125
+      children [
+        Shape {
+          appearance USE CIU_C_035_055_030
+          geometry Box {
+            size 100 47 0.05
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 18 -24.5 0.525
+      children [
+        Shape {
+          appearance USE CIU_C_045_033_022
+          geometry Box {
+            size 100 47 1.15
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 18 -24.5 1.125
+      children [
+        Shape {
+          appearance USE CIU_C_035_055_030
+          geometry Box {
+            size 100 47 0.05
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -19.125 0 0.525
+      children [
+        Shape {
+          appearance USE CIU_C_045_033_022
+          geometry Box {
+            size 25.75 2 1.15
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -19.125 0 1.125
+      children [
+        Shape {
+          appearance USE CIU_C_035_055_030
+          geometry Box {
+            size 25.75 2 0.05
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 38.75 0 0.525
+      children [
+        Shape {
+          appearance USE CIU_C_045_033_022
+          geometry Box {
+            size 58.5 2 1.15
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 38.75 0 1.125
+      children [
+        Shape {
+          appearance USE CIU_C_035_055_030
+          geometry Box {
+            size 58.5 2 0.05
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 7.875 0 -0.025
+      children [
+        Shape {
+          appearance DEF CIU_C_045_045_047 Appearance {
+            material Material {
+              diffuseColor 0.45 0.45 0.47
+            }
+          }
+          geometry Box {
+            size 3.25 1.9 0.05
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 7.875 -0.95 0.55
+      children [
+        Shape {
+          appearance DEF CIU_C_060_060_062 Appearance {
+            material Material {
+              diffuseColor 0.6 0.6 0.62
+            }
+          }
+          geometry Box {
+            size 3.25 0.1 1.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 7.875 0.95 0.55
+      children [
+        Shape {
+          appearance USE CIU_C_060_060_062
+          geometry Box {
+            size 3.25 0.1 1.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 9.45 0 0.55
+      children [
+        Shape {
+          appearance USE CIU_C_060_060_062
+          geometry Box {
+            size 0.1 2 1.1
+          }
+        }
+      ]
+    }
+  ]
+}
+DEF CIUDAD Pose {
+  translation 18 0 1.15
+  children [
+    Pose {
+      translation 0 2.5 0.02
+      children [
+        Shape {
+          appearance DEF CIU_C_017_017_018 Appearance {
+            material Material {
+              diffuseColor 0.17 0.17 0.18
+            }
+          }
+          geometry Box {
+            size 90 3 0.04
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -2.5 0.02
+      children [
+        Shape {
+          appearance USE CIU_C_017_017_018
+          geometry Box {
+            size 90 3 0.04
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -34.625 0 0.02
+      children [
+        Shape {
+          appearance USE CIU_C_017_017_018
+          geometry Box {
+            size 20.75 2 0.04
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 18.25 0 0.02
+      children [
+        Shape {
+          appearance USE CIU_C_017_017_018
+          geometry Box {
+            size 53.5 2 0.04
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 0.019
+      children [
+        Shape {
+          appearance USE CIU_C_017_017_018
+          geometry Box {
+            size 8 90 0.038
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -19.5 -19.5 0.06
+      children [
+        Shape {
+          appearance DEF CIU_C_068_068_066 Appearance {
+            material Material {
+              diffuseColor 0.68 0.68 0.66
+            }
+          }
+          geometry Box {
+            size 31 31 0.12
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -19.5 19.5 0.06
+      children [
+        Shape {
+          appearance USE CIU_C_068_068_066
+          geometry Box {
+            size 31 31 0.12
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 19.5 -19.5 0.06
+      children [
+        Shape {
+          appearance USE CIU_C_068_068_066
+          geometry Box {
+            size 31 31 0.12
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 19.5 19.5 0.06
+      children [
+        Shape {
+          appearance USE CIU_C_068_068_066
+          geometry Box {
+            size 31 31 0.12
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -44 0 0.043
+      children [
+        Shape {
+          appearance DEF CIU_C_095_080_010 Appearance {
+            material Material {
+              diffuseColor 0.95 0.8 0.1
+            }
+          }
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -44 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -40 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -40 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -36 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -36 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -32 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -32 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -28 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -28 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -24 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -20 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -16 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -12 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 12 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 12 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 16 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 16 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 20 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 20 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 24 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 24 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 28 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 28 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 32 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 32 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 36 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 36 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 40 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 40 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 44 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 44 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -7 -2 0.043
+      children [
+        Shape {
+          appearance DEF CIU_C_095_095_095 Appearance {
+            material Material {
+              diffuseColor 0.95 0.95 0.95
+            }
+          }
+          geometry Box {
+            size 0.35 3.8 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 7 2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.35 3.8 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 2 -7 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 3.8 0.35 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -2 7 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 3.8 0.35 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 5.2 -3.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -5.2 -3.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3.5 5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3.5 -5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 5.2 -2.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -5.2 -2.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -2.5 5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -2.5 -5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 5.2 -1.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -5.2 -1.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -1.5 5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -1.5 -5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 5.2 -0.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -5.2 -0.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -0.5 5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -0.5 -5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 5.2 0.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -5.2 0.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.5 5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.5 -5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 5.2 1.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -5.2 1.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 1.5 5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 1.5 -5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 5.2 2.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -5.2 2.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 2.5 5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 2.5 -5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 5.2 3.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -5.2 3.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3.5 5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3.5 -5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -16.375 0 0
+      children [
+        Shape {
+          geometry DEF CIU_M_rejilla_canal Mesh {
+            url [
+              "meshes/rejilla_canal.obj"
+            ]
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -34 -2 0.04
+      children [
+        Shape {
+          geometry DEF CIU_M_tapa_alcantarilla Mesh {
+            url [
+              "meshes/tapa_alcantarilla.obj"
+            ]
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -34 2 0.04
+      children [
+        Shape {
+          geometry USE CIU_M_tapa_alcantarilla
+        }
+      ]
+    }
+    Pose {
+      translation 34 -2 0.04
+      children [
+        Shape {
+          geometry USE CIU_M_tapa_alcantarilla
+        }
+      ]
+    }
+    Pose {
+      translation 34 2 0.04
+      children [
+        Shape {
+          geometry USE CIU_M_tapa_alcantarilla
+        }
+      ]
+    }
+    Pose {
+      translation 2 -32 0.04
+      children [
+        Shape {
+          geometry USE CIU_M_tapa_alcantarilla
+        }
+      ]
+    }
+    Pose {
+      translation -2 32 0.04
+      children [
+        Shape {
+          geometry USE CIU_M_tapa_alcantarilla
+        }
+      ]
+    }
+    Pose {
+      translation 2 32 0.04
+      children [
+        Shape {
+          geometry USE CIU_M_tapa_alcantarilla
+        }
+      ]
+    }
+    Pose {
+      translation -2 -32 0.04
+      children [
+        Shape {
+          geometry USE CIU_M_tapa_alcantarilla
+        }
+      ]
+    }
+    Pose {
+      translation 16 3.6 0.04
+      children [
+        Shape {
+          geometry DEF CIU_M_tragante Mesh {
+            url [
+              "meshes/tragante.obj"
+            ]
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -16 -3.6 0.04
+      children [
+        Shape {
+          geometry USE CIU_M_tragante
+        }
+      ]
+    }
+    Pose {
+      translation 30 -3.6 0.04
+      children [
+        Shape {
+          geometry USE CIU_M_tragante
+        }
+      ]
+    }
+    Pose {
+      translation -30 3.6 0.04
+      children [
+        Shape {
+          geometry USE CIU_M_tragante
+        }
+      ]
+    }
+    Pose {
+      translation 3.6 16 0.04
+      rotation 0 0 1 1.5708
+      children [
+        Shape {
+          geometry USE CIU_M_tragante
+        }
+      ]
+    }
+    Pose {
+      translation -3.6 -16 0.04
+      rotation 0 0 1 1.5708
+      children [
+        Shape {
+          geometry USE CIU_M_tragante
+        }
+      ]
+    }
+    Pose {
+      translation 3.6 -30 0.04
+      rotation 0 0 1 1.5708
+      children [
+        Shape {
+          geometry USE CIU_M_tragante
+        }
+      ]
+    }
+    Pose {
+      translation -3.6 30 0.04
+      rotation 0 0 1 1.5708
+      children [
+        Shape {
+          geometry USE CIU_M_tragante
+        }
+      ]
+    }
+    Pose {
+      translation -33 -7 0.12
+      rotation 0 0 1 2.666
+      children [
+        Shape {
+          geometry DEF CIU_M_arbol_2 Mesh {
+            url [
+              "meshes/arbol_2.obj"
+            ]
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -33 7 0.12
+      rotation 0 0 1 0.7775
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_2
+        }
+      ]
+    }
+    Pose {
+      translation -26 -7 0.12
+      rotation 0 0 1 3.9603
+      children [
+        Shape {
+          geometry DEF CIU_M_arbol_0 Mesh {
+            url [
+              "meshes/arbol_0.obj"
+            ]
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -26 7 0.12
+      rotation 0 0 1 5.9516
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_2
+        }
+      ]
+    }
+    Pose {
+      translation -18 -7 0.12
+      rotation 0 0 1 3.6772
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_2
+        }
+      ]
+    }
+    Pose {
+      translation -18 7 0.12
+      rotation 0 0 1 6.1309
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_0
+        }
+      ]
+    }
+    Pose {
+      translation -10 -7 0.12
+      rotation 0 0 1 3.4959
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_0
+        }
+      ]
+    }
+    Pose {
+      translation -10 7 0.12
+      rotation 0 0 1 1.8187
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_0
+        }
+      ]
+    }
+    Pose {
+      translation -7 -33 0.12
+      rotation 0 0 1 3.3955
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_0
+        }
+      ]
+    }
+    Pose {
+      translation -7 -26 0.12
+      rotation 0 0 1 1.9373
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_2
+        }
+      ]
+    }
+    Pose {
+      translation -7 -18 0.12
+      rotation 0 0 1 1.135
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_2
+        }
+      ]
+    }
+    Pose {
+      translation -7 -10 0.12
+      rotation 0 0 1 3.5872
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_2
+        }
+      ]
+    }
+    Pose {
+      translation -7 10 0.12
+      rotation 0 0 1 2.3387
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_0
+        }
+      ]
+    }
+    Pose {
+      translation -7 18 0.12
+      rotation 0 0 1 4.4721
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_2
+        }
+      ]
+    }
+    Pose {
+      translation -7 26 0.12
+      rotation 0 0 1 0.3743
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_2
+        }
+      ]
+    }
+    Pose {
+      translation -7 33 0.12
+      rotation 0 0 1 3.1175
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_0
+        }
+      ]
+    }
+    Pose {
+      translation 7 -33 0.12
+      rotation 0 0 1 2.6853
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_2
+        }
+      ]
+    }
+    Pose {
+      translation 7 -26 0.12
+      rotation 0 0 1 2.924
+      children [
+        Shape {
+          geometry DEF CIU_M_arbol_1 Mesh {
+            url [
+              "meshes/arbol_1.obj"
+            ]
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 7 -18 0.12
+      rotation 0 0 1 2.2707
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_1
+        }
+      ]
+    }
+    Pose {
+      translation 7 -10 0.12
+      rotation 0 0 1 4.9887
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_0
+        }
+      ]
+    }
+    Pose {
+      translation 7 10 0.12
+      rotation 0 0 1 4.8973
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_2
+        }
+      ]
+    }
+    Pose {
+      translation 7 18 0.12
+      rotation 0 0 1 3.6074
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_0
+        }
+      ]
+    }
+    Pose {
+      translation 7 26 0.12
+      rotation 0 0 1 3.1093
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_2
+        }
+      ]
+    }
+    Pose {
+      translation 7 33 0.12
+      rotation 0 0 1 4.5809
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_1
+        }
+      ]
+    }
+    Pose {
+      translation 10 -7 0.12
+      rotation 0 0 1 3.8243
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_1
+        }
+      ]
+    }
+    Pose {
+      translation 10 7 0.12
+      rotation 0 0 1 0.7415
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_0
+        }
+      ]
+    }
+    Pose {
+      translation 18 -7 0.12
+      rotation 0 0 1 1.036
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_1
+        }
+      ]
+    }
+    Pose {
+      translation 18 7 0.12
+      rotation 0 0 1 0.9545
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_1
+        }
+      ]
+    }
+    Pose {
+      translation 26 -7 0.12
+      rotation 0 0 1 2.6483
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_1
+        }
+      ]
+    }
+    Pose {
+      translation 26 7 0.12
+      rotation 0 0 1 0.4875
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_2
+        }
+      ]
+    }
+    Pose {
+      translation 33 -7 0.12
+      rotation 0 0 1 3.5986
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_2
+        }
+      ]
+    }
+    Pose {
+      translation 33 7 0.12
+      rotation 0 0 1 2.136
+      children [
+        Shape {
+          geometry USE CIU_M_arbol_1
+        }
+      ]
+    }
+    Pose {
+      translation -12 -5.5 0.12
+      rotation 0 0 1 3.1416
+      children [
+        Shape {
+          geometry DEF CIU_M_farola Mesh {
+            url [
+              "meshes/farola.obj"
+            ]
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -5.5 -12 0.12
+      rotation 0 0 1 1.5708
+      children [
+        Shape {
+          geometry USE CIU_M_farola
+        }
+      ]
+    }
+    Pose {
+      translation -12 5.5 0.12
+      children [
+        Shape {
+          geometry USE CIU_M_farola
+        }
+      ]
+    }
+    Pose {
+      translation 5.5 -12 0.12
+      rotation 0 0 1 -1.5708
+      children [
+        Shape {
+          geometry USE CIU_M_farola
+        }
+      ]
+    }
+    Pose {
+      translation 12 -5.5 0.12
+      rotation 0 0 1 3.1416
+      children [
+        Shape {
+          geometry USE CIU_M_farola
+        }
+      ]
+    }
+    Pose {
+      translation -5.5 12 0.12
+      rotation 0 0 1 1.5708
+      children [
+        Shape {
+          geometry USE CIU_M_farola
+        }
+      ]
+    }
+    Pose {
+      translation 12 5.5 0.12
+      children [
+        Shape {
+          geometry USE CIU_M_farola
+        }
+      ]
+    }
+    Pose {
+      translation 5.5 12 0.12
+      rotation 0 0 1 -1.5708
+      children [
+        Shape {
+          geometry USE CIU_M_farola
+        }
+      ]
+    }
+    Pose {
+      translation -22 -5.5 0.12
+      rotation 0 0 1 3.1416
+      children [
+        Shape {
+          geometry USE CIU_M_farola
+        }
+      ]
+    }
+    Pose {
+      translation -5.5 -22 0.12
+      rotation 0 0 1 1.5708
+      children [
+        Shape {
+          geometry USE CIU_M_farola
+        }
+      ]
+    }
+    Pose {
+      translation -22 5.5 0.12
+      children [
+        Shape {
+          geometry USE CIU_M_farola
+        }
+      ]
+    }
+    Pose {
+      translation 5.5 -22 0.12
+      rotation 0 0 1 -1.5708
+      children [
+        Shape {
+          geometry USE CIU_M_farola
+        }
+      ]
+    }
+    Pose {
+      translation 22 -5.5 0.12
+      rotation 0 0 1 3.1416
+      children [
+        Shape {
+          geometry USE CIU_M_farola
+        }
+      ]
+    }
+    Pose {
+      translation -5.5 22 0.12
+      rotation 0 0 1 1.5708
+      children [
+        Shape {
+          geometry USE CIU_M_farola
+        }
+      ]
+    }
+    Pose {
+      translation 22 5.5 0.12
+      children [
+        Shape {
+          geometry USE CIU_M_farola
+        }
+      ]
+    }
+    Pose {
+      translation 5.5 22 0.12
+      rotation 0 0 1 -1.5708
+      children [
+        Shape {
+          geometry USE CIU_M_farola
+        }
+      ]
+    }
+    Pose {
+      translation -32 -5.5 0.12
+      rotation 0 0 1 3.1416
+      children [
+        Shape {
+          geometry USE CIU_M_farola
+        }
+      ]
+    }
+    Pose {
+      translation -5.5 -32 0.12
+      rotation 0 0 1 1.5708
+      children [
+        Shape {
+          geometry USE CIU_M_farola
+        }
+      ]
+    }
+    Pose {
+      translation -32 5.5 0.12
+      children [
+        Shape {
+          geometry USE CIU_M_farola
+        }
+      ]
+    }
+    Pose {
+      translation 5.5 -32 0.12
+      rotation 0 0 1 -1.5708
+      children [
+        Shape {
+          geometry USE CIU_M_farola
+        }
+      ]
+    }
+    Pose {
+      translation 32 -5.5 0.12
+      rotation 0 0 1 3.1416
+      children [
+        Shape {
+          geometry USE CIU_M_farola
+        }
+      ]
+    }
+    Pose {
+      translation -5.5 32 0.12
+      rotation 0 0 1 1.5708
+      children [
+        Shape {
+          geometry USE CIU_M_farola
+        }
+      ]
+    }
+    Pose {
+      translation 32 5.5 0.12
+      children [
+        Shape {
+          geometry USE CIU_M_farola
+        }
+      ]
+    }
+    Pose {
+      translation 5.5 32 0.12
+      rotation 0 0 1 -1.5708
+      children [
+        Shape {
+          geometry USE CIU_M_farola
+        }
+      ]
+    }
+    Pose {
+      translation -14.5 5.9 0.12
+      children [
+        Shape {
+          geometry DEF CIU_M_baliza Mesh {
+            url [
+              "meshes/baliza.obj"
+            ]
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -14.5 5.9 4.82
+      children [
+        Shape {
+          appearance Appearance {
+            material DEF CIU_BAL_R Material {
+              diffuseColor 0.12 0 0
+              emissiveColor 0.12 0 0
+            }
+          }
+          geometry Sphere {
+            radius 0.22
+            subdivision 2
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -14.5 5.9 4.32
+      children [
+        Shape {
+          appearance Appearance {
+            material DEF CIU_BAL_Y Material {
+              diffuseColor 0.12 0.09 0
+              emissiveColor 1 0.75 0
+            }
+          }
+          geometry Sphere {
+            radius 0.22
+            subdivision 2
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -14.5 5.9 3.82
+      children [
+        Shape {
+          appearance Appearance {
+            material DEF CIU_BAL_G Material {
+              diffuseColor 0 0.12 0.03
+              emissiveColor 0 0.12 0.03
+            }
+          }
+          geometry Sphere {
+            radius 0.22
+            subdivision 2
+          }
+        }
+      ]
+    }
+  ]
+}
+Robot {
+  children [
+    Receiver {
+      name "receptor_ciudad"
+      channel 1
+    }
+  ]
+  name "ciudad"
+  controller "ciudad"
+  supervisor TRUE
+}
