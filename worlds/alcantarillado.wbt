@@ -1,12 +1,12 @@
 #VRML_SIM R2025a utf8
 
 WorldInfo {
-  title "Monitoreo Inteligente del Alcantarillado - Avance 3"
+  title "Monitoreo Inteligente del Alcantarillado - Avance 3 + Ciudad"
   basicTimeStep 16
 }
 Viewpoint {
-  orientation 0.16975982318533273 -0.017262593678852592 -0.9853342606910424 3.336308927260741
-  position 42.06135422630819 -5.396502399267488 12.897983565753714
+  orientation 0.00806648069479605 -0.9996053547760251 -0.026908485507322562 5.700468128921662
+  position -28.915942248187573 -0.9791250792906572 20.97765075919368
 }
 Background {
   skyColor [
@@ -30,7 +30,7 @@ Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position -2.220446049250313e-16
+        position -1.990360137040523e-16
         axis 0 -1 0
         anchor 6.2 0 0.8
         dampingConstant 0.5
@@ -47,7 +47,7 @@ Robot {
       ]
       endPoint Solid {
         translation 6.2 0 0.8
-        rotation 0 1 0 2.2832222013981507e-16
+        rotation 0 -1 0 0
         children [
           Pose {
             translation 0 0 -0.39
@@ -78,8 +78,8 @@ Robot {
           density -1
           mass 2
         }
-        linearVelocity -9.85522774499259e-15 0 7.958078640513121e-16
-        angularVelocity 0 -3.2553058706069247e-15 0
+        linearVelocity -2.0603865076747337e-14 0 -5.400124791776761e-16
+        angularVelocity 0 -4.116289032273201e-15 0
       }
     }
   ]
@@ -509,7 +509,7 @@ Solid {
   name "basura_fondo_3"
 }
 DEF AGUA Solid {
-  translation 0 0 -0.10144907590325875
+  translation 0 0 -0.35
   children [
     Shape {
       appearance PBRAppearance {
@@ -526,15 +526,15 @@ DEF AGUA Solid {
   name "agua"
 }
 DEF AGUA_DET Solid {
-  translation 0 0 -0.10144907590325875
+  translation 0 0 -0.35
   name "agua_det"
   boundingObject Box {
     size 12.2 1.76 1
   }
 }
 Robot {
-  translation -0.27540002258184326 0.0004289177769359097 0.6753517858833488
-  rotation 0.10367773157198898 0.9887654560530692 0.10767451366155587 0.18336054945193356
+  translation 1.9101524419369824 -0.008332674150204512 0.6570423364869571
+  rotation 0.055218675946070446 0.9969398542818247 -0.05533375797194007 0.17646261559449933
   children [
     Pose {
       translation 0 0 0.03
@@ -585,7 +585,7 @@ Robot {
             baseColor 0.5 0.5 0.5
             roughness 1
             metalness 0
-            emissiveColor 1 0.6000000238418579 0
+            emissiveColor 0 1 0
           }
           geometry Sphere {
             radius 0.03
@@ -601,7 +601,7 @@ Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 1.5708004181867246
+        position 1.5709439695298109
         axis -1 0 0
         anchor 0 0.14 0.1
         dampingConstant 0.3
@@ -618,7 +618,7 @@ Robot {
       ]
       endPoint Solid {
         translation 0 0.14 0.1
-        rotation -1 0 0 1.5708004181867248
+        rotation -1 0 0 1.5709439695298109
         children [
           Pose {
             translation 0 0 0.25
@@ -670,13 +670,13 @@ Robot {
           density -1
           mass 0.15
         }
-        linearVelocity -0.39744584492762997 -0.023003860673734812 0.3641071672624633
-        angularVelocity 0.010193000570960287 -0.6310813167229097 0.22060124348460508
+        linearVelocity -0.26812344442427316 -0.02241046858989918 0.07336199621894582
+        angularVelocity 0.16003213980355377 -0.6173127863858543 -0.01732844620729032
       }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 27.607731416740783
+        position 62.749474967126275
         axis 0 1 0
         anchor 0.13 0.19 0
       }
@@ -689,7 +689,7 @@ Robot {
       ]
       endPoint Solid {
         translation 0.13 0.19 0
-        rotation 0 1 0 2.4749901880224376
+        rotation 0 -1 0 0.08237810466958691
         children [
           Shape {
             appearance PBRAppearance {
@@ -726,13 +726,13 @@ Robot {
           density -1
           mass 0.3
         }
-        linearVelocity -0.27557626598046403 0.003379400884038549 0.43420483847335367
-        angularVelocity 0.08555840744533888 -6.000661859909375 0.10226374502903318
+        linearVelocity -0.19698433454936448 -0.004349483960490766 0.10884022857731224
+        angularVelocity 0.09079304367124547 -6.199893465919185 -0.056767545742910014
       }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position -67.72114753058077
+        position -36.71016863066772
         axis 0 1 0
         anchor -0.13 0.19 0
       }
@@ -745,7 +745,7 @@ Robot {
       ]
       endPoint Solid {
         translation -0.13 0.19 0
-        rotation 0 -1 0 4.8892944587849
+        rotation 0 1 0 0.9889432124098022
         children [
           Shape {
             appearance PBRAppearance {
@@ -782,13 +782,13 @@ Robot {
           density -1
           mass 0.3
         }
-        linearVelocity -0.30214737839233025 -0.05318985353382039 0.27268542904384335
-        angularVelocity 0.08617196328144622 -6.000605290371441 0.09956172704148812
+        linearVelocity -0.22383845594072588 -0.007301059545818715 -0.048361555548541185
+        angularVelocity 0.09067414495064949 -6.199868906387175 -0.056745172264686644
       }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 24.577271184045642
+        position 59.286253200443696
         axis 0 1 0
         anchor 0.13 -0.19 0
       }
@@ -801,7 +801,7 @@ Robot {
       ]
       endPoint Solid {
         translation 0.13 -0.19 0
-        rotation 0 -1 0 0.5554700446727034
+        rotation 0 -0.9999999999999999 0 3.5455998713521693
         children [
           Shape {
             appearance PBRAppearance {
@@ -838,13 +838,13 @@ Robot {
           density -1
           mass 0.3
         }
-        linearVelocity -0.18663249931489492 0.006020118950530156 0.43392246750238206
-        angularVelocity 0.10357184154460694 -7.257381583095458 0.07349702053088147
+        linearVelocity -0.20198418763560116 -0.0032735810275980933 0.047074569064120664
+        angularVelocity 0.08058096396844466 -7.033522228236942 -0.06374733719061715
       }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position -64.44142547211258
+        position -33.772911138010244
         axis 0 1 0
         anchor -0.13 -0.19 0
       }
@@ -857,7 +857,7 @@ Robot {
       ]
       endPoint Solid {
         translation -0.13 -0.19 0
-        rotation 0 -1 0 1.6095724003167196
+        rotation 0 0.9999999999999999 0 3.926200705067275
         children [
           Shape {
             appearance PBRAppearance {
@@ -894,8 +894,8 @@ Robot {
           density -1
           mass 0.3
         }
-        linearVelocity -0.21316042676296576 -0.050637325568700375 0.272563500638125
-        angularVelocity 0.10432992348385645 -7.2573796053855215 0.07389326696168141
+        linearVelocity -0.22860238559670362 -0.006580396072720013 -0.11075683210812137
+        angularVelocity 0.08058920662807917 -7.033522308864276 -0.06374804915002069
       }
     }
   ]
@@ -913,6 +913,4163 @@ Robot {
     mass 3
   }
   controller "robot_monitor"
-  linearVelocity -0.2628989637860783 -0.0226502681020412 0.35656595014585757
-  angularVelocity 0.010190328045934255 -0.6310813342956202 0.2206014741370025
+  linearVelocity -0.2309933130624464 -0.010256135912690343 0.002291540466196229
+  angularVelocity 0.15836199229770614 -0.6172923933846977 -0.016969564596919617
+}
+Group {
+  children [
+    Pose {
+      translation 0 0 -0.12
+      children [
+        Shape {
+          appearance DEF CIU_C_035_055_030 Appearance {
+            material Material {
+              diffuseColor 0.35 0.55 0.3
+            }
+          }
+          geometry Box {
+            size 400 400 0.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 18 24.5 0.525
+      children [
+        Shape {
+          appearance DEF CIU_C_045_033_022 Appearance {
+            material Material {
+              diffuseColor 0.45 0.33 0.22
+            }
+          }
+          geometry Box {
+            size 100 47 1.15
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 18 24.5 1.125
+      children [
+        Shape {
+          appearance USE CIU_C_035_055_030
+          geometry Box {
+            size 100 47 0.05
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 18 -24.5 0.525
+      children [
+        Shape {
+          appearance USE CIU_C_045_033_022
+          geometry Box {
+            size 100 47 1.15
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 18 -24.5 1.125
+      children [
+        Shape {
+          appearance USE CIU_C_035_055_030
+          geometry Box {
+            size 100 47 0.05
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -19.125 0 0.525
+      children [
+        Shape {
+          appearance USE CIU_C_045_033_022
+          geometry Box {
+            size 25.75 2 1.15
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -19.125 0 1.125
+      children [
+        Shape {
+          appearance USE CIU_C_035_055_030
+          geometry Box {
+            size 25.75 2 0.05
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 38.75 0 0.525
+      children [
+        Shape {
+          appearance USE CIU_C_045_033_022
+          geometry Box {
+            size 58.5 2 1.15
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 38.75 0 1.125
+      children [
+        Shape {
+          appearance USE CIU_C_035_055_030
+          geometry Box {
+            size 58.5 2 0.05
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 7.875 0 -0.025
+      children [
+        Shape {
+          appearance DEF CIU_C_045_045_047 Appearance {
+            material Material {
+              diffuseColor 0.45 0.45 0.47
+            }
+          }
+          geometry Box {
+            size 3.25 1.9 0.05
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 7.875 -0.95 0.55
+      children [
+        Shape {
+          appearance DEF CIU_C_060_060_062 Appearance {
+            material Material {
+              diffuseColor 0.6 0.6 0.62
+            }
+          }
+          geometry Box {
+            size 3.25 0.1 1.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 7.875 0.95 0.55
+      children [
+        Shape {
+          appearance USE CIU_C_060_060_062
+          geometry Box {
+            size 3.25 0.1 1.1
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 9.45 0 0.55
+      children [
+        Shape {
+          appearance USE CIU_C_060_060_062
+          geometry Box {
+            size 0.1 2 1.1
+          }
+        }
+      ]
+    }
+  ]
+}
+DEF CIUDAD Pose {
+  translation 18 0 1.15
+  children [
+    Pose {
+      translation 0 2.5 0.02
+      children [
+        Shape {
+          appearance DEF CIU_C_017_017_018 Appearance {
+            material Material {
+              diffuseColor 0.17 0.17 0.18
+            }
+          }
+          geometry Box {
+            size 90 3 0.04
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -2.5 0.02
+      children [
+        Shape {
+          appearance USE CIU_C_017_017_018
+          geometry Box {
+            size 90 3 0.04
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -34.625 0 0.02
+      children [
+        Shape {
+          appearance USE CIU_C_017_017_018
+          geometry Box {
+            size 20.75 2 0.04
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 18.25 0 0.02
+      children [
+        Shape {
+          appearance USE CIU_C_017_017_018
+          geometry Box {
+            size 53.5 2 0.04
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 0 0.019
+      children [
+        Shape {
+          appearance USE CIU_C_017_017_018
+          geometry Box {
+            size 8 90 0.038
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -19.5 -19.5 0.06
+      children [
+        Shape {
+          appearance DEF CIU_C_068_068_066 Appearance {
+            material Material {
+              diffuseColor 0.68 0.68 0.66
+            }
+          }
+          geometry Box {
+            size 31 31 0.12
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -19.5 19.5 0.06
+      children [
+        Shape {
+          appearance USE CIU_C_068_068_066
+          geometry Box {
+            size 31 31 0.12
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 19.5 -19.5 0.06
+      children [
+        Shape {
+          appearance USE CIU_C_068_068_066
+          geometry Box {
+            size 31 31 0.12
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 19.5 19.5 0.06
+      children [
+        Shape {
+          appearance USE CIU_C_068_068_066
+          geometry Box {
+            size 31 31 0.12
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -44 0 0.043
+      children [
+        Shape {
+          appearance DEF CIU_C_095_080_010 Appearance {
+            material Material {
+              diffuseColor 0.95 0.8 0.1
+            }
+          }
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -44 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -40 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -40 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -36 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -36 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -32 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -32 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -28 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -28 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -24 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -20 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -16 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -12 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 12 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 12 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 16 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 16 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 20 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 20 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 24 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 24 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 28 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 28 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 32 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 32 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 36 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 36 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 40 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 40 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 44 0 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 2 0.15 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 44 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_080_010
+          geometry Box {
+            size 0.15 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -7 -2 0.043
+      children [
+        Shape {
+          appearance DEF CIU_C_095_095_095 Appearance {
+            material Material {
+              diffuseColor 0.95 0.95 0.95
+            }
+          }
+          geometry Box {
+            size 0.35 3.8 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 7 2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.35 3.8 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 2 -7 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 3.8 0.35 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -2 7 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 3.8 0.35 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 5.2 -3.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -5.2 -3.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3.5 5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -3.5 -5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 5.2 -2.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -5.2 -2.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -2.5 5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -2.5 -5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 5.2 -1.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -5.2 -1.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -1.5 5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -1.5 -5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 5.2 -0.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -5.2 -0.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -0.5 5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -0.5 -5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 5.2 0.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -5.2 0.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.5 5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.5 -5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 5.2 1.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -5.2 1.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 1.5 5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 1.5 -5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 5.2 2.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -5.2 2.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 2.5 5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 2.5 -5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 5.2 3.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -5.2 3.5 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 2 0.5 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3.5 5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 3.5 -5.2 0.043
+      children [
+        Shape {
+          appearance USE CIU_C_095_095_095
+          geometry Box {
+            size 0.5 2 0.005
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -16.375 0 0
+      children [
+        DEF CIU_M_rejilla_canal Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.85 0.7 0.1
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/rejilla_canal__amarillo_seguridad.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.22 0.22 0.24
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/rejilla_canal__rejilla.obj"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation -34 -2 0.04
+      children [
+        DEF CIU_M_tapa_alcantarilla Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.28 0.28 0.3
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/tapa_alcantarilla__tapa.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.1 0.1 0.1
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/tapa_alcantarilla__metal_oscuro.obj"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation -34 2 0.04
+      children [
+        USE CIU_M_tapa_alcantarilla
+      ]
+    }
+    Pose {
+      translation 34 -2 0.04
+      children [
+        USE CIU_M_tapa_alcantarilla
+      ]
+    }
+    Pose {
+      translation 34 2 0.04
+      children [
+        USE CIU_M_tapa_alcantarilla
+      ]
+    }
+    Pose {
+      translation 2 -32 0.04
+      children [
+        USE CIU_M_tapa_alcantarilla
+      ]
+    }
+    Pose {
+      translation -2 32 0.04
+      children [
+        USE CIU_M_tapa_alcantarilla
+      ]
+    }
+    Pose {
+      translation 2 32 0.04
+      children [
+        USE CIU_M_tapa_alcantarilla
+      ]
+    }
+    Pose {
+      translation -2 -32 0.04
+      children [
+        USE CIU_M_tapa_alcantarilla
+      ]
+    }
+    Pose {
+      translation 16 3.6 0.04
+      children [
+        DEF CIU_M_tragante Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.1 0.1 0.1
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/tragante__metal_oscuro.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.22 0.22 0.24
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/tragante__rejilla.obj"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation -16 -3.6 0.04
+      children [
+        USE CIU_M_tragante
+      ]
+    }
+    Pose {
+      translation 30 -3.6 0.04
+      children [
+        USE CIU_M_tragante
+      ]
+    }
+    Pose {
+      translation -30 3.6 0.04
+      children [
+        USE CIU_M_tragante
+      ]
+    }
+    Pose {
+      translation 3.6 16 0.04
+      rotation 0 0 1 1.5708
+      children [
+        USE CIU_M_tragante
+      ]
+    }
+    Pose {
+      translation -3.6 -16 0.04
+      rotation 0 0 1 1.5708
+      children [
+        USE CIU_M_tragante
+      ]
+    }
+    Pose {
+      translation 3.6 -30 0.04
+      rotation 0 0 1 1.5708
+      children [
+        USE CIU_M_tragante
+      ]
+    }
+    Pose {
+      translation -3.6 30 0.04
+      rotation 0 0 1 1.5708
+      children [
+        USE CIU_M_tragante
+      ]
+    }
+    Pose {
+      translation -33 -7 0.12
+      rotation 0 0 1 2.666
+      children [
+        DEF CIU_M_arbol_2 Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.4 0.27 0.15
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/arbol_2__tronco.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.3 0.6 0.2
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/arbol_2__hojas_2.obj"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation -33 7 0.12
+      rotation 0 0 1 0.7775
+      children [
+        USE CIU_M_arbol_2
+      ]
+    }
+    Pose {
+      translation -26 -7 0.12
+      rotation 0 0 1 3.9603
+      children [
+        DEF CIU_M_arbol_0 Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.4 0.27 0.15
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/arbol_0__tronco.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.2 0.5 0.2
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/arbol_0__hojas_0.obj"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation -26 7 0.12
+      rotation 0 0 1 5.9516
+      children [
+        USE CIU_M_arbol_2
+      ]
+    }
+    Pose {
+      translation -18 -7 0.12
+      rotation 0 0 1 3.6772
+      children [
+        USE CIU_M_arbol_2
+      ]
+    }
+    Pose {
+      translation -18 7 0.12
+      rotation 0 0 1 6.1309
+      children [
+        USE CIU_M_arbol_0
+      ]
+    }
+    Pose {
+      translation -10 -7 0.12
+      rotation 0 0 1 3.4959
+      children [
+        USE CIU_M_arbol_0
+      ]
+    }
+    Pose {
+      translation -10 7 0.12
+      rotation 0 0 1 1.8187
+      children [
+        USE CIU_M_arbol_0
+      ]
+    }
+    Pose {
+      translation -7 -33 0.12
+      rotation 0 0 1 3.3955
+      children [
+        USE CIU_M_arbol_0
+      ]
+    }
+    Pose {
+      translation -7 -26 0.12
+      rotation 0 0 1 1.9373
+      children [
+        USE CIU_M_arbol_2
+      ]
+    }
+    Pose {
+      translation -7 -18 0.12
+      rotation 0 0 1 1.135
+      children [
+        USE CIU_M_arbol_2
+      ]
+    }
+    Pose {
+      translation -7 -10 0.12
+      rotation 0 0 1 3.5872
+      children [
+        USE CIU_M_arbol_2
+      ]
+    }
+    Pose {
+      translation -7 10 0.12
+      rotation 0 0 1 2.3387
+      children [
+        USE CIU_M_arbol_0
+      ]
+    }
+    Pose {
+      translation -7 18 0.12
+      rotation 0 0 1 4.4721
+      children [
+        USE CIU_M_arbol_2
+      ]
+    }
+    Pose {
+      translation -7 26 0.12
+      rotation 0 0 1 0.3743
+      children [
+        USE CIU_M_arbol_2
+      ]
+    }
+    Pose {
+      translation -7 33 0.12
+      rotation 0 0 1 3.1175
+      children [
+        USE CIU_M_arbol_0
+      ]
+    }
+    Pose {
+      translation 7 -33 0.12
+      rotation 0 0 1 2.6853
+      children [
+        USE CIU_M_arbol_2
+      ]
+    }
+    Pose {
+      translation 7 -26 0.12
+      rotation 0 0 1 2.924
+      children [
+        DEF CIU_M_arbol_1 Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.4 0.27 0.15
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/arbol_1__tronco.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.25 0.55 0.25
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/arbol_1__hojas_1.obj"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation 7 -18 0.12
+      rotation 0 0 1 2.2707
+      children [
+        USE CIU_M_arbol_1
+      ]
+    }
+    Pose {
+      translation 7 -10 0.12
+      rotation 0 0 1 4.9887
+      children [
+        USE CIU_M_arbol_0
+      ]
+    }
+    Pose {
+      translation 7 10 0.12
+      rotation 0 0 1 4.8973
+      children [
+        USE CIU_M_arbol_2
+      ]
+    }
+    Pose {
+      translation 7 18 0.12
+      rotation 0 0 1 3.6074
+      children [
+        USE CIU_M_arbol_0
+      ]
+    }
+    Pose {
+      translation 7 26 0.12
+      rotation 0 0 1 3.1093
+      children [
+        USE CIU_M_arbol_2
+      ]
+    }
+    Pose {
+      translation 7 33 0.12
+      rotation 0 0 1 4.5809
+      children [
+        USE CIU_M_arbol_1
+      ]
+    }
+    Pose {
+      translation 10 -7 0.12
+      rotation 0 0 1 3.8243
+      children [
+        USE CIU_M_arbol_1
+      ]
+    }
+    Pose {
+      translation 10 7 0.12
+      rotation 0 0 1 0.7415
+      children [
+        USE CIU_M_arbol_0
+      ]
+    }
+    Pose {
+      translation 18 -7 0.12
+      rotation 0 0 1 1.036
+      children [
+        USE CIU_M_arbol_1
+      ]
+    }
+    Pose {
+      translation 18 7 0.12
+      rotation 0 0 1 0.9545
+      children [
+        USE CIU_M_arbol_1
+      ]
+    }
+    Pose {
+      translation 26 -7 0.12
+      rotation 0 0 1 2.6483
+      children [
+        USE CIU_M_arbol_1
+      ]
+    }
+    Pose {
+      translation 26 7 0.12
+      rotation 0 0 1 0.4875
+      children [
+        USE CIU_M_arbol_2
+      ]
+    }
+    Pose {
+      translation 33 -7 0.12
+      rotation 0 0 1 3.5986
+      children [
+        USE CIU_M_arbol_2
+      ]
+    }
+    Pose {
+      translation 33 7 0.12
+      rotation 0 0 1 2.136
+      children [
+        USE CIU_M_arbol_1
+      ]
+    }
+    Pose {
+      translation -7.5 -4.8 0.12
+      rotation 0 0 1 3.1416
+      children [
+        DEF CIU_M_semaforo Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.25 0.25 0.27
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/semaforo__metal.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.1 0.1 0.1
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/semaforo__metal_oscuro.obj"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation -7.67 -4.8 4.65
+      children [
+        Shape {
+          appearance Appearance {
+            material DEF CIU_A_R Material {
+              diffuseColor 0.12 0 0
+              emissiveColor 1 0.1 0.1
+            }
+          }
+          geometry Sphere {
+            radius 0.12
+            subdivision 2
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -7.67 -4.8 4.32
+      children [
+        Shape {
+          appearance Appearance {
+            material DEF CIU_A_Y Material {
+              diffuseColor 0.12 0.09 0
+              emissiveColor 0.12 0.09 0
+            }
+          }
+          geometry Sphere {
+            radius 0.12
+            subdivision 2
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -7.67 -4.8 3.99
+      children [
+        Shape {
+          appearance Appearance {
+            material DEF CIU_A_G Material {
+              diffuseColor 0 0.12 0.03
+              emissiveColor 0 0.12 0.03
+            }
+          }
+          geometry Sphere {
+            radius 0.12
+            subdivision 2
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 7.5 4.8 0.12
+      children [
+        USE CIU_M_semaforo
+      ]
+    }
+    Pose {
+      translation 7.67 4.8 4.65
+      children [
+        Shape {
+          appearance Appearance {
+            material USE CIU_A_R
+          }
+          geometry Sphere {
+            radius 0.12
+            subdivision 2
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 7.67 4.8 4.32
+      children [
+        Shape {
+          appearance Appearance {
+            material USE CIU_A_Y
+          }
+          geometry Sphere {
+            radius 0.12
+            subdivision 2
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 7.67 4.8 3.99
+      children [
+        Shape {
+          appearance Appearance {
+            material USE CIU_A_G
+          }
+          geometry Sphere {
+            radius 0.12
+            subdivision 2
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 4.8 -7.5 0.12
+      rotation 0 0 1 -1.5708
+      children [
+        USE CIU_M_semaforo
+      ]
+    }
+    Pose {
+      translation 4.8 -7.67 4.65
+      children [
+        Shape {
+          appearance Appearance {
+            material DEF CIU_B_R Material {
+              diffuseColor 0.12 0 0
+              emissiveColor 1 0.1 0.1
+            }
+          }
+          geometry Sphere {
+            radius 0.12
+            subdivision 2
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 4.8 -7.67 4.32
+      children [
+        Shape {
+          appearance Appearance {
+            material DEF CIU_B_Y Material {
+              diffuseColor 0.12 0.09 0
+              emissiveColor 0.12 0.09 0
+            }
+          }
+          geometry Sphere {
+            radius 0.12
+            subdivision 2
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 4.8 -7.67 3.99
+      children [
+        Shape {
+          appearance Appearance {
+            material DEF CIU_B_G Material {
+              diffuseColor 0 0.12 0.03
+              emissiveColor 0 0.12 0.03
+            }
+          }
+          geometry Sphere {
+            radius 0.12
+            subdivision 2
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -4.8 7.5 0.12
+      rotation 0 0 1 1.5708
+      children [
+        USE CIU_M_semaforo
+      ]
+    }
+    Pose {
+      translation -4.8 7.67 4.65
+      children [
+        Shape {
+          appearance Appearance {
+            material USE CIU_B_R
+          }
+          geometry Sphere {
+            radius 0.12
+            subdivision 2
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -4.8 7.67 4.32
+      children [
+        Shape {
+          appearance Appearance {
+            material USE CIU_B_Y
+          }
+          geometry Sphere {
+            radius 0.12
+            subdivision 2
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -4.8 7.67 3.99
+      children [
+        Shape {
+          appearance Appearance {
+            material USE CIU_B_G
+          }
+          geometry Sphere {
+            radius 0.12
+            subdivision 2
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 15 15 0.12
+      children [
+        DEF CIU_M_hotel_0 Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.82 0.8 0.75
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_0__hotel_0.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.3 0.3 0.32
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_0__techo.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.15 0.25 0.35
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_0__vidrio.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.1 0.1 0.1
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_0__metal_oscuro.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.6 0.1 0.15
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_0__toldo.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.25 0.25 0.27
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_0__metal.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.62 0.62 0.6
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_0__escalon.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.2 0.3 0.4
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_0__ventana_off.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 1 0.85 0.4
+                roughness 0.7
+                metalness 0
+                emissiveColor 1 0.85 0.4
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_0__ventana_on.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.08 0.08 0.12
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_0__letrero.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 1 0.85 0.3
+                roughness 0.7
+                metalness 0
+                emissiveColor 1 0.85 0.3
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_0__letra_hotel.obj"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation -15 15 0.12
+      children [
+        DEF CIU_M_hotel_1 Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.55 0.65 0.78
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_1__hotel_1.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.3 0.3 0.32
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_1__techo.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.15 0.25 0.35
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_1__vidrio.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.1 0.1 0.1
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_1__metal_oscuro.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.6 0.1 0.15
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_1__toldo.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.25 0.25 0.27
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_1__metal.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.62 0.62 0.6
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_1__escalon.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.2 0.3 0.4
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_1__ventana_off.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 1 0.85 0.4
+                roughness 0.7
+                metalness 0
+                emissiveColor 1 0.85 0.4
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_1__ventana_on.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.08 0.08 0.12
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_1__letrero.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 1 0.85 0.3
+                roughness 0.7
+                metalness 0
+                emissiveColor 1 0.85 0.3
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_1__letra_hotel.obj"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation -15 -15 0.12
+      rotation 0 0 1 3.1416
+      children [
+        DEF CIU_M_hotel_2 Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.78 0.62 0.5
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_2__hotel_2.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.3 0.3 0.32
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_2__techo.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.15 0.25 0.35
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_2__vidrio.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.1 0.1 0.1
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_2__metal_oscuro.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.6 0.1 0.15
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_2__toldo.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.25 0.25 0.27
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_2__metal.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.62 0.62 0.6
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_2__escalon.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.2 0.3 0.4
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_2__ventana_off.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 1 0.85 0.4
+                roughness 0.7
+                metalness 0
+                emissiveColor 1 0.85 0.4
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_2__ventana_on.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.08 0.08 0.12
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_2__letrero.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 1 0.85 0.3
+                roughness 0.7
+                metalness 0
+                emissiveColor 1 0.85 0.3
+              }
+              geometry Mesh {
+                url [
+                  "meshes/hotel_2__letra_hotel.obj"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation 15 -15 0.12
+      rotation 0 0 1 3.1416
+      children [
+        USE CIU_M_hotel_0
+      ]
+    }
+    Pose {
+      translation -15 -25 0.12
+      rotation 0 0 1 1.5708
+      children [
+        DEF CIU_M_casa_0 Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.93 0.87 0.72
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_0__casa_0.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.62 0.2 0.15
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_0__teja_roja.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.35 0.22 0.12
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_0__puerta.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.62 0.62 0.6
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_0__escalon.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.58 0.28 0.22
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_0__ladrillo.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.2 0.3 0.4
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_0__ventana_off.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 1 0.85 0.4
+                roughness 0.7
+                metalness 0
+                emissiveColor 1 0.85 0.4
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_0__ventana_on.obj"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation -26 -14 0.12
+      rotation 0 0 1 3.1416
+      children [
+        DEF CIU_M_casa_1 Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.72 0.84 0.9
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_1__casa_1.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.38 0.4 0.44
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_1__teja_gris.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.35 0.22 0.12
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_1__puerta.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.62 0.62 0.6
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_1__escalon.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.58 0.28 0.22
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_1__ladrillo.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 1 0.85 0.4
+                roughness 0.7
+                metalness 0
+                emissiveColor 1 0.85 0.4
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_1__ventana_on.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.2 0.3 0.4
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_1__ventana_off.obj"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation -26 -25 0.12
+      rotation 0 0 1 1.5708
+      children [
+        DEF CIU_M_casa_2 Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.92 0.72 0.68
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_2__casa_2.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.42 0.28 0.18
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_2__teja_marron.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.35 0.22 0.12
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_2__puerta.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.62 0.62 0.6
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_2__escalon.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.58 0.28 0.22
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_2__ladrillo.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.2 0.3 0.4
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_2__ventana_off.obj"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation -15 25 0.12
+      rotation 0 0 1 1.5708
+      children [
+        DEF CIU_M_casa_3 Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.76 0.88 0.72
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_3__casa_3.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.62 0.2 0.15
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_3__teja_roja.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.35 0.22 0.12
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_3__puerta.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.62 0.62 0.6
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_3__escalon.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.58 0.28 0.22
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_3__ladrillo.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 1 0.85 0.4
+                roughness 0.7
+                metalness 0
+                emissiveColor 1 0.85 0.4
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_3__ventana_on.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.2 0.3 0.4
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/casa_3__ventana_off.obj"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation -26 14 0.12
+      children [
+        USE CIU_M_casa_0
+      ]
+    }
+    Pose {
+      translation -26 25 0.12
+      rotation 0 0 1 1.5708
+      children [
+        USE CIU_M_casa_1
+      ]
+    }
+    Pose {
+      translation 15 -25 0.12
+      rotation 0 0 1 -1.5708
+      children [
+        USE CIU_M_casa_2
+      ]
+    }
+    Pose {
+      translation 26 -14 0.12
+      rotation 0 0 1 3.1416
+      children [
+        USE CIU_M_casa_3
+      ]
+    }
+    Pose {
+      translation 26 -25 0.12
+      rotation 0 0 1 -1.5708
+      children [
+        USE CIU_M_casa_0
+      ]
+    }
+    Pose {
+      translation 15 25 0.12
+      rotation 0 0 1 -1.5708
+      children [
+        USE CIU_M_casa_1
+      ]
+    }
+    Pose {
+      translation 26 14 0.12
+      children [
+        USE CIU_M_casa_2
+      ]
+    }
+    Pose {
+      translation 26 25 0.12
+      rotation 0 0 1 -1.5708
+      children [
+        USE CIU_M_casa_3
+      ]
+    }
+    DEF CIU_AUTO0 Solid {
+      translation 35.63999999999945 -2 0.04
+      children [
+        DEF CIU_M_auto_0 Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.8 0.1 0.1
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/auto_0__carro_rojo.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.15 0.25 0.35
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/auto_0__vidrio.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.12 0.12 0.13
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/auto_0__parachoques.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.05 0.05 0.05
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/auto_0__llanta.obj"
+                ]
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance DEF CIU_FARO_APP Appearance {
+                material Material {
+                  diffuseColor 1 1 0.85
+                  emissiveColor 1 0.95 0.7
+                }
+              }
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 2.13 0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material DEF CIU_AUTO0_FRENO Material {
+                  diffuseColor 0.25 0 0
+                  emissiveColor 0.25 0 0
+                }
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material USE CIU_AUTO0_FRENO
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+      ]
+      name "auto0"
+    }
+    DEF CIU_AUTO1 Solid {
+      translation -31.860000000000895 -2 0.04
+      children [
+        DEF CIU_M_auto_1 Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.1 0.3 0.7
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/auto_1__carro_azul.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.15 0.25 0.35
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/auto_1__vidrio.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.12 0.12 0.13
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/auto_1__parachoques.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.05 0.05 0.05
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/auto_1__llanta.obj"
+                ]
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 2.13 0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material DEF CIU_AUTO1_FRENO Material {
+                  diffuseColor 0.25 0 0
+                  emissiveColor 0.25 0 0
+                }
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material USE CIU_AUTO1_FRENO
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+      ]
+      name "auto1"
+    }
+    DEF CIU_AUTO2 Solid {
+      translation -13.109962665155082 -2 0.04
+      children [
+        DEF CIU_M_auto_2 Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.9 0.9 0.9
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/auto_2__carro_blanco.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.15 0.25 0.35
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/auto_2__vidrio.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.12 0.12 0.13
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/auto_2__parachoques.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.05 0.05 0.05
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/auto_2__llanta.obj"
+                ]
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 2.13 0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material DEF CIU_AUTO2_FRENO Material {
+                  diffuseColor 0.25 0 0
+                  emissiveColor 0.25 0 0
+                }
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material USE CIU_AUTO2_FRENO
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+      ]
+      name "auto2"
+    }
+    DEF CIU_AUTO3 Solid {
+      translation 13.139999999999105 -2 0.04
+      children [
+        DEF CIU_M_auto_3 Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.15 0.15 0.15
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/auto_3__carro_negro.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.15 0.25 0.35
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/auto_3__vidrio.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.12 0.12 0.13
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/auto_3__parachoques.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.05 0.05 0.05
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/auto_3__llanta.obj"
+                ]
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 2.13 0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material DEF CIU_AUTO3_FRENO Material {
+                  diffuseColor 0.25 0 0
+                  emissiveColor 0.25 0 0
+                }
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material USE CIU_AUTO3_FRENO
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+      ]
+      name "auto3"
+    }
+    DEF CIU_AUTO4 Solid {
+      translation -40.63999999999945 2 0.04
+      rotation 0 0 1 3.1416
+      children [
+        DEF CIU_M_auto_4 Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.9 0.7 0.1
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/auto_4__carro_amarillo.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.15 0.25 0.35
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/auto_4__vidrio.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.12 0.12 0.13
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/auto_4__parachoques.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.05 0.05 0.05
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/auto_4__llanta.obj"
+                ]
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 2.13 0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material DEF CIU_AUTO4_FRENO Material {
+                  diffuseColor 0.25 0 0
+                  emissiveColor 0.25 0 0
+                }
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material USE CIU_AUTO4_FRENO
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+      ]
+      name "auto4"
+    }
+    DEF CIU_AUTO5 Solid {
+      translation 26.860000000000895 2 0.04
+      rotation 0 0 1 3.1416
+      children [
+        DEF CIU_M_auto_5 Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.2 0.6 0.3
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/auto_5__carro_verde.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.15 0.25 0.35
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/auto_5__vidrio.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.12 0.12 0.13
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/auto_5__parachoques.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.05 0.05 0.05
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/auto_5__llanta.obj"
+                ]
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 2.13 0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material DEF CIU_AUTO5_FRENO Material {
+                  diffuseColor 0.25 0 0
+                  emissiveColor 0.25 0 0
+                }
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material USE CIU_AUTO5_FRENO
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+      ]
+      name "auto5"
+    }
+    DEF CIU_AUTO6 Solid {
+      translation 11.684267802401353 2 0.04
+      rotation 0 0 1 3.1416
+      children [
+        USE CIU_M_auto_0
+        Pose {
+          translation 2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 2.13 0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material DEF CIU_AUTO6_FRENO Material {
+                  diffuseColor 0.25 0 0
+                  emissiveColor 0.25 0 0
+                }
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material USE CIU_AUTO6_FRENO
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+      ]
+      name "auto6"
+    }
+    DEF CIU_AUTO7 Solid {
+      translation -18.139999999999105 2 0.04
+      rotation 0 0 1 3.1416
+      children [
+        USE CIU_M_auto_1
+        Pose {
+          translation 2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 2.13 0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material DEF CIU_AUTO7_FRENO Material {
+                  diffuseColor 0.25 0 0
+                  emissiveColor 0.25 0 0
+                }
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material USE CIU_AUTO7_FRENO
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+      ]
+      name "auto7"
+    }
+    DEF CIU_AUTO8 Solid {
+      translation 2 -15.200144676580397 0.04
+      rotation 0 0 1 1.5708
+      children [
+        USE CIU_M_auto_2
+        Pose {
+          translation 2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 2.13 0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material DEF CIU_AUTO8_FRENO Material {
+                  diffuseColor 0.25 0 0
+                  emissiveColor 1 0.05 0.05
+                }
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material USE CIU_AUTO8_FRENO
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+      ]
+      name "auto8"
+    }
+    DEF CIU_AUTO9 Solid {
+      translation 2 -9.500026313100209 0.04
+      rotation 0 0 1 1.5708
+      children [
+        USE CIU_M_auto_3
+        Pose {
+          translation 2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 2.13 0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material DEF CIU_AUTO9_FRENO Material {
+                  diffuseColor 0.25 0 0
+                  emissiveColor 1 0.05 0.05
+                }
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material USE CIU_AUTO9_FRENO
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+      ]
+      name "auto9"
+    }
+    DEF CIU_AUTO10 Solid {
+      translation 2 -26.632926783045342 0.04
+      rotation 0 0 1 1.5708
+      children [
+        USE CIU_M_auto_4
+        Pose {
+          translation 2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 2.13 0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material DEF CIU_AUTO10_FRENO Material {
+                  diffuseColor 0.25 0 0
+                  emissiveColor 1 0.05 0.05
+                }
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material USE CIU_AUTO10_FRENO
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+      ]
+      name "auto10"
+    }
+    DEF CIU_AUTO11 Solid {
+      translation 2 -20.90215640781884 0.04
+      rotation 0 0 1 1.5708
+      children [
+        USE CIU_M_auto_5
+        Pose {
+          translation 2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 2.13 0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material DEF CIU_AUTO11_FRENO Material {
+                  diffuseColor 0.25 0 0
+                  emissiveColor 1 0.05 0.05
+                }
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material USE CIU_AUTO11_FRENO
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+      ]
+      name "auto11"
+    }
+    DEF CIU_AUTO12 Solid {
+      translation -2 9.50869255621399 0.04
+      rotation 0 0 1 -1.5708
+      children [
+        USE CIU_M_auto_0
+        Pose {
+          translation 2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 2.13 0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material DEF CIU_AUTO12_FRENO Material {
+                  diffuseColor 0.25 0 0
+                  emissiveColor 1 0.05 0.05
+                }
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material USE CIU_AUTO12_FRENO
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+      ]
+      name "auto12"
+    }
+    DEF CIU_AUTO13 Solid {
+      translation -2 27.17665305454838 0.04
+      rotation 0 0 1 -1.5708
+      children [
+        USE CIU_M_auto_1
+        Pose {
+          translation 2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 2.13 0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material DEF CIU_AUTO13_FRENO Material {
+                  diffuseColor 0.25 0 0
+                  emissiveColor 0.25 0 0
+                }
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material USE CIU_AUTO13_FRENO
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+      ]
+      name "auto13"
+    }
+    DEF CIU_AUTO14 Solid {
+      translation -2 20.977591934258086 0.04
+      rotation 0 0 1 -1.5708
+      children [
+        USE CIU_M_auto_2
+        Pose {
+          translation 2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 2.13 0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material DEF CIU_AUTO14_FRENO Material {
+                  diffuseColor 0.25 0 0
+                  emissiveColor 1 0.05 0.05
+                }
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material USE CIU_AUTO14_FRENO
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+      ]
+      name "auto14"
+    }
+    DEF CIU_AUTO15 Solid {
+      translation -2 15.222291727804658 0.04
+      rotation 0 0 1 -1.5708
+      children [
+        USE CIU_M_auto_3
+        Pose {
+          translation 2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 2.13 0.6 0.65
+          children [
+            Shape {
+              appearance USE CIU_FARO_APP
+              geometry Box {
+                size 0.05 0.3 0.18
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 -0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material DEF CIU_AUTO15_FRENO Material {
+                  diffuseColor 0.25 0 0
+                  emissiveColor 1 0.05 0.05
+                }
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -2.13 0.6 0.65
+          children [
+            Shape {
+              appearance Appearance {
+                material USE CIU_AUTO15_FRENO
+              }
+              geometry Box {
+                size 0.05 0.3 0.15
+              }
+            }
+          ]
+        }
+      ]
+      name "auto15"
+    }
+    Pose {
+      translation -12 -5.5 0.12
+      rotation 0 0 1 3.1416
+      children [
+        DEF CIU_M_farola Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.25 0.25 0.27
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/farola__metal.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 1 0.9 0.55
+                roughness 0.7
+                metalness 0
+                emissiveColor 1 0.9 0.55
+              }
+              geometry Mesh {
+                url [
+                  "meshes/farola__luz_farola.obj"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation -5.5 -12 0.12
+      rotation 0 0 1 1.5708
+      children [
+        USE CIU_M_farola
+      ]
+    }
+    Pose {
+      translation -12 5.5 0.12
+      children [
+        USE CIU_M_farola
+      ]
+    }
+    Pose {
+      translation 5.5 -12 0.12
+      rotation 0 0 1 -1.5708
+      children [
+        USE CIU_M_farola
+      ]
+    }
+    Pose {
+      translation 12 -5.5 0.12
+      rotation 0 0 1 3.1416
+      children [
+        USE CIU_M_farola
+      ]
+    }
+    Pose {
+      translation -5.5 12 0.12
+      rotation 0 0 1 1.5708
+      children [
+        USE CIU_M_farola
+      ]
+    }
+    Pose {
+      translation 12 5.5 0.12
+      children [
+        USE CIU_M_farola
+      ]
+    }
+    Pose {
+      translation 5.5 12 0.12
+      rotation 0 0 1 -1.5708
+      children [
+        USE CIU_M_farola
+      ]
+    }
+    Pose {
+      translation -22 -5.5 0.12
+      rotation 0 0 1 3.1416
+      children [
+        USE CIU_M_farola
+      ]
+    }
+    Pose {
+      translation -5.5 -22 0.12
+      rotation 0 0 1 1.5708
+      children [
+        USE CIU_M_farola
+      ]
+    }
+    Pose {
+      translation -22 5.5 0.12
+      children [
+        USE CIU_M_farola
+      ]
+    }
+    Pose {
+      translation 5.5 -22 0.12
+      rotation 0 0 1 -1.5708
+      children [
+        USE CIU_M_farola
+      ]
+    }
+    Pose {
+      translation 22 -5.5 0.12
+      rotation 0 0 1 3.1416
+      children [
+        USE CIU_M_farola
+      ]
+    }
+    Pose {
+      translation -5.5 22 0.12
+      rotation 0 0 1 1.5708
+      children [
+        USE CIU_M_farola
+      ]
+    }
+    Pose {
+      translation 22 5.5 0.12
+      children [
+        USE CIU_M_farola
+      ]
+    }
+    Pose {
+      translation 5.5 22 0.12
+      rotation 0 0 1 -1.5708
+      children [
+        USE CIU_M_farola
+      ]
+    }
+    Pose {
+      translation -32 -5.5 0.12
+      rotation 0 0 1 3.1416
+      children [
+        USE CIU_M_farola
+      ]
+    }
+    Pose {
+      translation -5.5 -32 0.12
+      rotation 0 0 1 1.5708
+      children [
+        USE CIU_M_farola
+      ]
+    }
+    Pose {
+      translation -32 5.5 0.12
+      children [
+        USE CIU_M_farola
+      ]
+    }
+    Pose {
+      translation 5.5 -32 0.12
+      rotation 0 0 1 -1.5708
+      children [
+        USE CIU_M_farola
+      ]
+    }
+    Pose {
+      translation 32 -5.5 0.12
+      rotation 0 0 1 3.1416
+      children [
+        USE CIU_M_farola
+      ]
+    }
+    Pose {
+      translation -5.5 32 0.12
+      rotation 0 0 1 1.5708
+      children [
+        USE CIU_M_farola
+      ]
+    }
+    Pose {
+      translation 32 5.5 0.12
+      children [
+        USE CIU_M_farola
+      ]
+    }
+    Pose {
+      translation 5.5 32 0.12
+      rotation 0 0 1 -1.5708
+      children [
+        USE CIU_M_farola
+      ]
+    }
+    Pose {
+      translation -14.5 5.9 0.12
+      children [
+        DEF CIU_M_baliza Group {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.25 0.25 0.27
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/baliza__metal.obj"
+                ]
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.1 0.1 0.1
+                roughness 0.7
+                metalness 0
+              }
+              geometry Mesh {
+                url [
+                  "meshes/baliza__metal_oscuro.obj"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+    Pose {
+      translation -14.5 5.9 4.82
+      children [
+        Shape {
+          appearance Appearance {
+            material DEF CIU_BAL_R Material {
+              diffuseColor 0.12 0 0
+              emissiveColor 0.12 0 0
+            }
+          }
+          geometry Sphere {
+            radius 0.22
+            subdivision 2
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -14.5 5.9 4.32
+      children [
+        Shape {
+          appearance Appearance {
+            material DEF CIU_BAL_Y Material {
+              diffuseColor 0.12 0.09 0
+              emissiveColor 0.12 0.09 0
+            }
+          }
+          geometry Sphere {
+            radius 0.22
+            subdivision 2
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -14.5 5.9 3.82
+      children [
+        Shape {
+          appearance Appearance {
+            material DEF CIU_BAL_G Material {
+              diffuseColor 0 0.12 0.03
+              emissiveColor 0.1 1 0.2
+            }
+          }
+          geometry Sphere {
+            radius 0.22
+            subdivision 2
+          }
+        }
+      ]
+    }
+  ]
+}
+Robot {
+  children [
+    Receiver {
+      name "receptor_ciudad"
+      channel 1
+    }
+  ]
+  name "ciudad"
+  controller "ciudad"
+  supervisor TRUE
 }
